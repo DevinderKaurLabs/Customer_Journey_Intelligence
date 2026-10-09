@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+# big data stays out of git
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+# outputs are regenerated; charts + results are kept for the README
+outputs/*.csv
+!outputs/evaluation.csv
+!outputs/journey_depth_value.csv

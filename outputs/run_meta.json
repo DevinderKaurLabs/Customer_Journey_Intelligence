@@ -1,0 +1,5 @@
+{
+  "source": "Demo data (REES46 schema, simulated)",
+  "demo": true,
+  "cutoff": "2019-11-01"
+}
