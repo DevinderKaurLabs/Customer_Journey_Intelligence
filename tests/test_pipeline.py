@@ -81,7 +81,7 @@ def test_recommend_excludes_seen_and_explains(events):
     r = model.recommend(ft, k=3)
     assert r["need"].iloc[0] == "furniture.bedroom.bed"
     assert "furniture.living_room.sofa" not in set(r["need"])
-    assert r["why"].iloc[0].startswith("after furniture.living_room.sofa")
+    assert "people who looked at sofa went on to this" in r["why"].iloc[0]
 
 
 def test_suppression_bought_and_fatigued(events):

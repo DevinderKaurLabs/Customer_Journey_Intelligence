@@ -37,6 +37,23 @@ def first_touches(events: pd.DataFrame) -> pd.DataFrame:
     return ft
 
 
+def short_need(need: str) -> str:
+    """'furniture.living_room.sofa' -> 'sofa'; 'kids.carriage' -> 'carriage'."""
+    return need.split(".")[-1].replace("_", " ")
+
+
+def home_mission(need: str) -> str | None:
+    """The mission whose most specific prefix matches this need.
+    A cradle matches both 'furniture.bedroom' (new home) and 'furniture.bedroom.cradle'
+    (baby); the longer, more specific prefix wins."""
+    best, best_len = None, -1
+    for m, prefixes in MISSION_PREFIXES.items():
+        for p in prefixes:
+            if (need == p or need.startswith(p + ".")) and len(p) > best_len:
+                best, best_len = m, len(p)
+    return best
+
+
 def need_in_mission(need: str, mission: str) -> bool:
     return any(need == p or need.startswith(p + ".") or p.startswith(need + ".") for p in MISSION_PREFIXES[mission])
 
@@ -92,7 +109,10 @@ class NextNeedModel:
         scores = c.groupby(["user_id", "to_need"], sort=False).agg(
             score=("contrib", "sum"), from_need=("from_need", "first"), prob=("prob", "first")
         ).reset_index().rename(columns={"to_need": "need"})
-        scores["why"] = "after " + scores["from_need"] + " (" + (scores["prob"] * 100).round(0).astype(int).astype(str) + "% go on to this)"
+        scores["why"] = (
+            (scores["prob"] * 100).round(0).astype(int).astype(str) + "% of people who looked at "
+            + scores["from_need"].map(short_need) + " went on to this"
+        )
 
         # small popularity prior: fills gaps for thin histories, breaks ties
         users = pd.DataFrame({"user_id": h["user_id"].unique()})
@@ -101,7 +121,7 @@ class NextNeedModel:
         prior = users.merge(pop, how="cross")
         scores = prior.merge(scores[["user_id", "need", "score", "why"]], on=["user_id", "need"], how="outer")
         scores["score"] = scores["score"].fillna(0) + scores["p"].fillna(0) * 1e-3
-        scores["why"] = scores["why"].fillna("popular new need")
+        scores["why"] = scores["why"].fillna("Popular next step for shoppers like this")
 
         if user_missions is not None and len(user_missions) and mission_boost != 1.0:
             nm = need_mission_table(scores["need"].unique())

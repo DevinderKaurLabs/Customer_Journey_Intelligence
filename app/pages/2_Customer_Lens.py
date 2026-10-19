@@ -4,7 +4,7 @@ import streamlit as st
 
 from common import (
     MISSION_NAMES, NAVY, PLAYBOOK, SKY, STAGE_ORDER, STAGE_RULES, TEAL,
-    load_events, load_outputs, pretty, setup, source_badge,
+    label, load_events, load_outputs, pretty, setup, source_badge, stage_track,
 )
 from journey.suppression import alternatives
 
@@ -16,11 +16,21 @@ st.title("Customer Lens")
 st.markdown("Pick a customer. See the journey, the mission we detected, the stage, the next need, and what we'd **stop** showing them.")
 source_badge(d["meta"])
 
+# a link like ?customer=512038320 opens that customer directly
+qp_uid = None
+try:
+    qp_uid = int(st.query_params.get("customer", ""))
+except ValueError:
+    pass
+qp_row = a[a["user_id"] == qp_uid].iloc[0] if qp_uid in set(a["user_id"]) else None
+
 c1, c2, c3 = st.columns(3)
 mission_opts = ["Any"] + sorted(a["mission_name"].dropna().unique().tolist())
-m_pick = c1.selectbox("Mission", mission_opts, index=mission_opts.index("Setting up a new home") if "Setting up a new home" in mission_opts else 0)
+m_default = qp_row["mission_name"] if qp_row is not None else "Setting up a new home"
+m_pick = c1.selectbox("Mission", mission_opts, index=mission_opts.index(m_default) if m_default in mission_opts else 0)
 stages = ["Any"] + [s for s in STAGE_ORDER + ["No mission"] if s in a["stage"].unique()]
-s_pick = c2.selectbox("Stage", stages, index=stages.index("Next need") if "Next need" in stages else 0)
+s_default = qp_row["stage"] if qp_row is not None else "Next need"
+s_pick = c2.selectbox("Stage", stages, index=stages.index(s_default) if s_default in stages else 0)
 pool = a.copy()
 if m_pick != "Any":
     pool = pool[pool["mission_name"] == m_pick]
@@ -30,13 +40,18 @@ pool = pool.sort_values("mission_score", ascending=False)
 if pool.empty:
     st.warning("No customers match. Loosen the filters.")
     st.stop()
-uid = c3.selectbox("Customer", pool["user_id"].head(300).tolist())
+options = pool["user_id"].head(300).tolist()
+if qp_uid in set(pool["user_id"]) and qp_uid not in options[:1]:
+    options = [qp_uid] + [o for o in options if o != qp_uid]
+uid = c3.selectbox("Customer", options)
+st.query_params["customer"] = str(uid)
 row = a[a["user_id"] == uid].iloc[0]
 
 # ---- the read
 left, right = st.columns([1.1, 1])
 with left:
     st.subheader("What we think is going on")
+    st.markdown(stage_track(row["stage"]), unsafe_allow_html=True)
     st.markdown(
         f'<div class="card"><span class="pill">{row["mission_name"]}</span><span class="pill">{row["stage"]}</span>'
         f'<br><br>{STAGE_RULES.get(row["stage"], "No multi-category pattern — treat as a single-product shopper.")}'
@@ -58,7 +73,7 @@ with right:
 # ---- the timeline
 ev = load_events()
 ue = ev[ev["user_id"] == uid].copy()
-ue["Need"] = ue["need"].map(lambda n: pretty(n).split(" › ", 1)[-1])
+ue["Need"] = ue["need"].map(label)
 order = ue.groupby("Need")["event_time"].min().sort_values().index.tolist()
 st.subheader("The journey so far")
 fig = px.scatter(
@@ -78,8 +93,9 @@ with n1:
     st.subheader("Show next")
     r = recs[recs["user_id"] == uid].sort_values("rank")
     for _, x in r.iterrows():
-        st.markdown(f'<div class="card"><b>{x["rank"]}. {pretty(x["need"])}</b><br>'
-                    f'<span style="font-size:.85rem;color:#5B6B7C">{x["why"].replace("after ", "after ").replace(".", " › ")}</span></div>',
+        st.markdown(f'<div class="card"><b>{x["rank"]}. {label(x["need"]).capitalize()}</b>'
+                    f' <span style="font-size:.8rem;color:#5B6B7C">({pretty(x["need"])})</span><br>'
+                    f'<span style="font-size:.88rem;color:#33475B">Why: {x["why"]}</span></div>',
                     unsafe_allow_html=True)
 with n2:
     st.subheader("Stop showing")
@@ -87,9 +103,12 @@ with n2:
     if s.empty:
         st.write("Nothing to suppress yet.")
     else:
-        for _, x in s.sort_values("reason").iterrows():
+        s = s.sort_values(["reason", "suppress_until"], ascending=[True, False])
+        if len(s) > 6:
+            st.caption(f"Showing 6 of {len(s)} paused products.")
+        for _, x in s.head(6).iterrows():
             why = "Already bought" if x["reason"] == "bought" else "Seen many times, never added to cart"
-            st.markdown(f'<div class="card"><b>{pretty(x["need"])}</b> · product {x["product_id"]}<br>'
+            st.markdown(f'<div class="card"><b>{label(x["need"]).capitalize()}</b> · product {x["product_id"]}<br>'
                         f'<span style="font-size:.85rem">{why} — paused until {x["suppress_until"]:%d %b}</span></div>',
                         unsafe_allow_html=True)
         fat = s[s["reason"] == "fatigued"]

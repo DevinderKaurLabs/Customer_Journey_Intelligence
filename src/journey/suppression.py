@@ -42,6 +42,7 @@ def suppression_list(events: pd.DataFrame, as_of: pd.Timestamp, cfg: PipelineCon
     ].copy()
     fatigued["reason"] = "fatigued"
     fatigued["suppress_until"] = fatigued["since"] + pd.Timedelta(days=21)
+    fatigued = fatigued[fatigued["suppress_until"] > as_of]  # only pauses still running
 
     cols = ["user_id", "product_id", "need", "reason", "since", "suppress_until"]
     return pd.concat([bought[cols], fatigued[cols]], ignore_index=True)

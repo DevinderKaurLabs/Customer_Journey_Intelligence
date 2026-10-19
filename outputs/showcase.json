@@ -1,0 +1,1714 @@
+{
+  "life_events": {
+    "new_home": {
+      "user_id": 512215740,
+      "mission": "new_home",
+      "mission_name": "Setting up a new home",
+      "stage": "Mission complete",
+      "days_active": 30,
+      "journey": [
+        {
+          "need": "furniture.living_room.sofa",
+          "label": "sofa",
+          "first_seen": "30 Oct",
+          "strongest_action": "added to cart",
+          "in_mission": true
+        },
+        {
+          "need": "appliances.kitchen.refrigerators",
+          "label": "refrigerators",
+          "first_seen": "02 Nov",
+          "strongest_action": "bought",
+          "in_mission": true
+        },
+        {
+          "need": "appliances.kitchen.washer",
+          "label": "washer",
+          "first_seen": "06 Nov",
+          "strongest_action": "bought",
+          "in_mission": true
+        },
+        {
+          "need": "furniture.bedroom.bed",
+          "label": "bed",
+          "first_seen": "07 Nov",
+          "strongest_action": "added to cart",
+          "in_mission": true
+        },
+        {
+          "need": "apparel.costume",
+          "label": "costume",
+          "first_seen": "08 Nov",
+          "strongest_action": "added to cart",
+          "in_mission": false
+        },
+        {
+          "need": "furniture.universal.light",
+          "label": "light",
+          "first_seen": "13 Nov",
+          "strongest_action": "bought",
+          "in_mission": true
+        },
+        {
+          "need": "furniture.kitchen.table",
+          "label": "table",
+          "first_seen": "18 Nov",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "auto.accessories.player",
+          "label": "player",
+          "first_seen": "21 Nov",
+          "strongest_action": "added to cart",
+          "in_mission": false
+        },
+        {
+          "need": "construction.tools.drill",
+          "label": "drill",
+          "first_seen": "22 Nov",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "furniture.kitchen.chair",
+          "label": "chair",
+          "first_seen": "26 Nov",
+          "strongest_action": "added to cart",
+          "in_mission": true
+        }
+      ],
+      "mission_steps": [
+        "sofa",
+        "refrigerators",
+        "washer",
+        "bed",
+        "light",
+        "table",
+        "drill",
+        "chair"
+      ],
+      "next_needs": [
+        {
+          "need": "furniture.living_room.cabinet",
+          "label": "cabinet",
+          "why": "19% of people who looked at chair went on to this"
+        },
+        {
+          "need": "appliances.environment.vacuum",
+          "label": "vacuum",
+          "why": "19% of people who looked at light went on to this"
+        },
+        {
+          "need": "appliances.kitchen.hood",
+          "label": "hood",
+          "why": "12% of people who looked at chair went on to this"
+        }
+      ],
+      "stop": [
+        {
+          "need": "furniture.universal.light",
+          "label": "light",
+          "product_id": 1000280,
+          "reason": "bought"
+        },
+        {
+          "need": "appliances.kitchen.refrigerators",
+          "label": "refrigerators",
+          "product_id": 1000291,
+          "reason": "bought"
+        },
+        {
+          "need": "appliances.kitchen.washer",
+          "label": "washer",
+          "product_id": 1000314,
+          "reason": "bought"
+        }
+      ],
+      "job": "Make them loyal",
+      "message": "Care, accessories, services, membership, referral",
+      "avoid": "Acquisition-style ads for things they already own",
+      "link": "Customer_Lens?customer=512215740"
+    },
+    "growing_family": {
+      "user_id": 512255160,
+      "mission": "growing_family",
+      "mission_name": "Preparing for a baby / growing family",
+      "stage": "Ready to buy",
+      "days_active": 33,
+      "journey": [
+        {
+          "need": "kids.carriage",
+          "label": "carriage",
+          "first_seen": "19 Oct",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "appliances.environment.air_heater",
+          "label": "air heater",
+          "first_seen": "24 Oct",
+          "strongest_action": "added to cart",
+          "in_mission": true
+        },
+        {
+          "need": "furniture.bedroom.cradle",
+          "label": "cradle",
+          "first_seen": "01 Nov",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "appliances.kitchen.blender",
+          "label": "blender",
+          "first_seen": "04 Nov",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "kids.toys",
+          "label": "toys",
+          "first_seen": "11 Nov",
+          "strongest_action": "added to cart",
+          "in_mission": true
+        },
+        {
+          "need": "kids.dolls",
+          "label": "dolls",
+          "first_seen": "13 Nov",
+          "strongest_action": "bought",
+          "in_mission": true
+        },
+        {
+          "need": "kids.skates",
+          "label": "skates",
+          "first_seen": "18 Nov",
+          "strongest_action": "added to cart",
+          "in_mission": true
+        }
+      ],
+      "mission_steps": [
+        "carriage",
+        "air heater",
+        "cradle",
+        "blender",
+        "toys",
+        "dolls",
+        "skates"
+      ],
+      "next_needs": [
+        {
+          "need": "electronics.smartphone",
+          "label": "smartphone",
+          "why": "8% of people who looked at skates went on to this"
+        },
+        {
+          "need": "electronics.tablet",
+          "label": "tablet",
+          "why": "5% of people who looked at dolls went on to this"
+        },
+        {
+          "need": "accessories.wallet",
+          "label": "wallet",
+          "why": "6% of people who looked at skates went on to this"
+        }
+      ],
+      "stop": [
+        {
+          "need": "kids.dolls",
+          "label": "dolls",
+          "product_id": 1000561,
+          "reason": "bought"
+        },
+        {
+          "need": "kids.skates",
+          "label": "skates",
+          "product_id": 1000563,
+          "reason": "fatigued"
+        },
+        {
+          "need": "kids.skates",
+          "label": "skates",
+          "product_id": 1000575,
+          "reason": "fatigued"
+        }
+      ],
+      "job": "Remove friction",
+      "message": "Cart reminder with delivery date, installation, instalments",
+      "avoid": "Default discounts \u2014 test first whether they're needed",
+      "link": "Customer_Lens?customer=512255160"
+    },
+    "home_office": {
+      "user_id": 512283020,
+      "mission": "home_office",
+      "mission_name": "Building a home office",
+      "stage": "Mission complete",
+      "days_active": 33,
+      "journey": [
+        {
+          "need": "computers.notebook",
+          "label": "notebook",
+          "first_seen": "28 Oct",
+          "strongest_action": "bought",
+          "in_mission": true
+        },
+        {
+          "need": "apparel.costume",
+          "label": "costume",
+          "first_seen": "01 Nov",
+          "strongest_action": "viewed",
+          "in_mission": false
+        },
+        {
+          "need": "computers.peripherals.monitor",
+          "label": "monitor",
+          "first_seen": "06 Nov",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "computers.peripherals.mouse",
+          "label": "mouse",
+          "first_seen": "09 Nov",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "furniture.office.chair",
+          "label": "chair",
+          "first_seen": "17 Nov",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "computers.peripherals.printer",
+          "label": "printer",
+          "first_seen": "21 Nov",
+          "strongest_action": "bought",
+          "in_mission": true
+        },
+        {
+          "need": "electronics.audio.headphone",
+          "label": "headphone",
+          "first_seen": "23 Nov",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "accessories.wallet",
+          "label": "wallet",
+          "first_seen": "24 Nov",
+          "strongest_action": "viewed",
+          "in_mission": false
+        },
+        {
+          "need": "stationery.cartrige",
+          "label": "cartrige",
+          "first_seen": "30 Nov",
+          "strongest_action": "bought",
+          "in_mission": true
+        }
+      ],
+      "mission_steps": [
+        "notebook",
+        "monitor",
+        "mouse",
+        "chair",
+        "printer",
+        "headphone",
+        "cartrige"
+      ],
+      "next_needs": [
+        {
+          "need": "computers.peripherals.keyboard",
+          "label": "keyboard",
+          "why": "3% of people who looked at cartrige went on to this"
+        },
+        {
+          "need": "electronics.smartphone",
+          "label": "smartphone",
+          "why": "7% of people who looked at cartrige went on to this"
+        },
+        {
+          "need": "electronics.tablet",
+          "label": "tablet",
+          "why": "6% of people who looked at cartrige went on to this"
+        }
+      ],
+      "stop": [
+        {
+          "need": "computers.notebook",
+          "label": "notebook",
+          "product_id": 1000656,
+          "reason": "bought"
+        },
+        {
+          "need": "computers.peripherals.printer",
+          "label": "printer",
+          "product_id": 1000822,
+          "reason": "bought"
+        },
+        {
+          "need": "stationery.cartrige",
+          "label": "cartrige",
+          "product_id": 1000895,
+          "reason": "bought"
+        },
+        {
+          "need": "computers.peripherals.mouse",
+          "label": "mouse",
+          "product_id": 1000744,
+          "reason": "fatigued"
+        },
+        {
+          "need": "computers.peripherals.mouse",
+          "label": "mouse",
+          "product_id": 1000750,
+          "reason": "fatigued"
+        },
+        {
+          "need": "computers.peripherals.mouse",
+          "label": "mouse",
+          "product_id": 1000752,
+          "reason": "fatigued"
+        }
+      ],
+      "job": "Make them loyal",
+      "message": "Care, accessories, services, membership, referral",
+      "avoid": "Acquisition-style ads for things they already own",
+      "link": "Customer_Lens?customer=512283020"
+    },
+    "kitchen_upgrade": {
+      "user_id": 512155720,
+      "mission": "kitchen_upgrade",
+      "mission_name": "Upgrading the kitchen",
+      "stage": "Mission complete",
+      "days_active": 31,
+      "journey": [
+        {
+          "need": "appliances.kitchen.kettle",
+          "label": "kettle",
+          "first_seen": "22 Oct",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "appliances.kitchen.coffee_machine",
+          "label": "coffee machine",
+          "first_seen": "23 Oct",
+          "strongest_action": "bought",
+          "in_mission": true
+        },
+        {
+          "need": "appliances.kitchen.toster",
+          "label": "toster",
+          "first_seen": "26 Oct",
+          "strongest_action": "bought",
+          "in_mission": true
+        },
+        {
+          "need": "appliances.kitchen.microwave",
+          "label": "microwave",
+          "first_seen": "02 Nov",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "appliances.kitchen.juicer",
+          "label": "juicer",
+          "first_seen": "08 Nov",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "appliances.kitchen.mixer",
+          "label": "mixer",
+          "first_seen": "15 Nov",
+          "strongest_action": "bought",
+          "in_mission": true
+        },
+        {
+          "need": "appliances.kitchen.meat_grinder",
+          "label": "meat grinder",
+          "first_seen": "21 Nov",
+          "strongest_action": "viewed",
+          "in_mission": true
+        }
+      ],
+      "mission_steps": [
+        "kettle",
+        "coffee machine",
+        "toster",
+        "microwave",
+        "juicer",
+        "mixer",
+        "meat grinder"
+      ],
+      "next_needs": [
+        {
+          "need": "accessories.wallet",
+          "label": "wallet",
+          "why": "4% of people who looked at mixer went on to this"
+        },
+        {
+          "need": "auto.accessories.player",
+          "label": "player",
+          "why": "4% of people who looked at mixer went on to this"
+        },
+        {
+          "need": "electronics.smartphone",
+          "label": "smartphone",
+          "why": "4% of people who looked at mixer went on to this"
+        }
+      ],
+      "stop": [
+        {
+          "need": "appliances.kitchen.coffee_machine",
+          "label": "coffee machine",
+          "product_id": 1000953,
+          "reason": "bought"
+        },
+        {
+          "need": "appliances.kitchen.toster",
+          "label": "toster",
+          "product_id": 1000992,
+          "reason": "bought"
+        },
+        {
+          "need": "appliances.kitchen.mixer",
+          "label": "mixer",
+          "product_id": 1001015,
+          "reason": "bought"
+        },
+        {
+          "need": "appliances.kitchen.juicer",
+          "label": "juicer",
+          "product_id": 1001025,
+          "reason": "fatigued"
+        },
+        {
+          "need": "appliances.kitchen.juicer",
+          "label": "juicer",
+          "product_id": 1001040,
+          "reason": "fatigued"
+        }
+      ],
+      "job": "Make them loyal",
+      "message": "Care, accessories, services, membership, referral",
+      "avoid": "Acquisition-style ads for things they already own",
+      "link": "Customer_Lens?customer=512155720"
+    },
+    "active_lifestyle": {
+      "user_id": 512019600,
+      "mission": "active_lifestyle",
+      "mission_name": "Starting an active lifestyle",
+      "stage": "Next need",
+      "days_active": 35,
+      "journey": [
+        {
+          "need": "electronics.clocks",
+          "label": "clocks",
+          "first_seen": "17 Oct",
+          "strongest_action": "added to cart",
+          "in_mission": true
+        },
+        {
+          "need": "sport.bicycle",
+          "label": "bicycle",
+          "first_seen": "25 Oct",
+          "strongest_action": "added to cart",
+          "in_mission": true
+        },
+        {
+          "need": "apparel.shoes",
+          "label": "shoes",
+          "first_seen": "29 Oct",
+          "strongest_action": "bought",
+          "in_mission": true
+        },
+        {
+          "need": "apparel.trousers",
+          "label": "trousers",
+          "first_seen": "31 Oct",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "accessories.bag",
+          "label": "bag",
+          "first_seen": "07 Nov",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "sport.trainer",
+          "label": "trainer",
+          "first_seen": "14 Nov",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "sport.tennis",
+          "label": "tennis",
+          "first_seen": "19 Nov",
+          "strongest_action": "viewed",
+          "in_mission": true
+        }
+      ],
+      "mission_steps": [
+        "clocks",
+        "bicycle",
+        "shoes",
+        "trousers",
+        "bag",
+        "trainer",
+        "tennis"
+      ],
+      "next_needs": [
+        {
+          "need": "electronics.audio.headphone",
+          "label": "headphone",
+          "why": "8% of people who looked at tennis went on to this"
+        },
+        {
+          "need": "accessories.wallet",
+          "label": "wallet",
+          "why": "6% of people who looked at tennis went on to this"
+        },
+        {
+          "need": "electronics.smartphone",
+          "label": "smartphone",
+          "why": "8% of people who looked at tennis went on to this"
+        }
+      ],
+      "stop": [
+        {
+          "need": "apparel.shoes",
+          "label": "shoes",
+          "product_id": 1001185,
+          "reason": "bought"
+        },
+        {
+          "need": "sport.trainer",
+          "label": "trainer",
+          "product_id": 1001106,
+          "reason": "fatigued"
+        },
+        {
+          "need": "accessories.bag",
+          "label": "bag",
+          "product_id": 1001233,
+          "reason": "fatigued"
+        }
+      ],
+      "job": "Serve the next need",
+      "message": "Show the predicted next need; stop advertising what they bought",
+      "avoid": "Re-showing the purchased product",
+      "link": "Customer_Lens?customer=512019600"
+    },
+    "entertainment": {
+      "user_id": 512067500,
+      "mission": "entertainment",
+      "mission_name": "Building a home entertainment setup",
+      "stage": "Next need",
+      "days_active": 33,
+      "journey": [
+        {
+          "need": "electronics.video.tv",
+          "label": "tv",
+          "first_seen": "27 Oct",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "electronics.audio.acoustic",
+          "label": "acoustic",
+          "first_seen": "03 Nov",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "furniture.living_room.cabinet",
+          "label": "cabinet",
+          "first_seen": "15 Nov",
+          "strongest_action": "bought",
+          "in_mission": true
+        },
+        {
+          "need": "electronics.audio.subwoofer",
+          "label": "subwoofer",
+          "first_seen": "24 Nov",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "electronics.audio.music_tools",
+          "label": "music tools",
+          "first_seen": "26 Nov",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "electronics.video.projector",
+          "label": "projector",
+          "first_seen": "27 Nov",
+          "strongest_action": "viewed",
+          "in_mission": true
+        }
+      ],
+      "mission_steps": [
+        "tv",
+        "acoustic",
+        "cabinet",
+        "subwoofer",
+        "music tools",
+        "projector"
+      ],
+      "next_needs": [
+        {
+          "need": "electronics.audio.headphone",
+          "label": "headphone",
+          "why": "9% of people who looked at music tools went on to this"
+        },
+        {
+          "need": "appliances.kitchen.kettle",
+          "label": "kettle",
+          "why": "6% of people who looked at projector went on to this"
+        },
+        {
+          "need": "accessories.wallet",
+          "label": "wallet",
+          "why": "3% of people who looked at cabinet went on to this"
+        }
+      ],
+      "stop": [
+        {
+          "need": "furniture.living_room.cabinet",
+          "label": "cabinet",
+          "product_id": 1000088,
+          "reason": "bought"
+        },
+        {
+          "need": "electronics.video.projector",
+          "label": "projector",
+          "product_id": 1001332,
+          "reason": "fatigued"
+        }
+      ],
+      "job": "Serve the next need",
+      "message": "Show the predicted next need; stop advertising what they bought",
+      "avoid": "Re-showing the purchased product",
+      "link": "Customer_Lens?customer=512067500"
+    }
+  },
+  "stages": {
+    "Exploring": {
+      "user_id": 512087740,
+      "mission": "new_home",
+      "mission_name": "Setting up a new home",
+      "stage": "Exploring",
+      "days_active": 15,
+      "journey": [
+        {
+          "need": "furniture.bedroom.bed",
+          "label": "bed",
+          "first_seen": "15 Nov",
+          "strongest_action": "added to cart",
+          "in_mission": true
+        },
+        {
+          "need": "furniture.living_room.sofa",
+          "label": "sofa",
+          "first_seen": "19 Nov",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "furniture.kitchen.table",
+          "label": "table",
+          "first_seen": "30 Nov",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "electronics.audio.headphone",
+          "label": "headphone",
+          "first_seen": "30 Nov",
+          "strongest_action": "viewed",
+          "in_mission": false
+        }
+      ],
+      "mission_steps": [
+        "bed",
+        "sofa",
+        "table"
+      ],
+      "next_needs": [
+        {
+          "need": "appliances.kitchen.refrigerators",
+          "label": "refrigerators",
+          "why": "20% of people who looked at bed went on to this"
+        },
+        {
+          "need": "appliances.kitchen.washer",
+          "label": "washer",
+          "why": "16% of people who looked at bed went on to this"
+        },
+        {
+          "need": "furniture.universal.light",
+          "label": "light",
+          "why": "19% of people who looked at table went on to this"
+        }
+      ],
+      "stop": [],
+      "job": "Inspire",
+      "message": "Mission guide content (e.g. a 'first month in a new home' checklist), not product ads",
+      "avoid": "Discounts \u2014 they haven't decided what they want yet",
+      "link": "Customer_Lens?customer=512087740"
+    },
+    "Researching": {
+      "user_id": 512126080,
+      "mission": "new_home",
+      "mission_name": "Setting up a new home",
+      "stage": "Researching",
+      "days_active": 27,
+      "journey": [
+        {
+          "need": "furniture.bedroom.bed",
+          "label": "bed",
+          "first_seen": "02 Nov",
+          "strongest_action": "added to cart",
+          "in_mission": true
+        },
+        {
+          "need": "apparel.costume",
+          "label": "costume",
+          "first_seen": "04 Nov",
+          "strongest_action": "viewed",
+          "in_mission": false
+        },
+        {
+          "need": "furniture.living_room.sofa",
+          "label": "sofa",
+          "first_seen": "09 Nov",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "appliances.kitchen.washer",
+          "label": "washer",
+          "first_seen": "15 Nov",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "furniture.kitchen.table",
+          "label": "table",
+          "first_seen": "17 Nov",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "country_yard.lawn_mower",
+          "label": "lawn mower",
+          "first_seen": "20 Nov",
+          "strongest_action": "added to cart",
+          "in_mission": false
+        },
+        {
+          "need": "appliances.environment.vacuum",
+          "label": "vacuum",
+          "first_seen": "24 Nov",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "furniture.kitchen.chair",
+          "label": "chair",
+          "first_seen": "26 Nov",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "furniture.universal.light",
+          "label": "light",
+          "first_seen": "30 Nov",
+          "strongest_action": "viewed",
+          "in_mission": true
+        }
+      ],
+      "mission_steps": [
+        "bed",
+        "sofa",
+        "washer",
+        "table",
+        "vacuum",
+        "chair",
+        "light"
+      ],
+      "next_needs": [
+        {
+          "need": "construction.tools.drill",
+          "label": "drill",
+          "why": "15% of people who looked at light went on to this"
+        },
+        {
+          "need": "furniture.living_room.cabinet",
+          "label": "cabinet",
+          "why": "19% of people who looked at chair went on to this"
+        },
+        {
+          "need": "appliances.kitchen.hood",
+          "label": "hood",
+          "why": "12% of people who looked at chair went on to this"
+        }
+      ],
+      "stop": [
+        {
+          "need": "furniture.living_room.sofa",
+          "label": "sofa",
+          "product_id": 1000024,
+          "reason": "fatigued"
+        },
+        {
+          "need": "furniture.living_room.sofa",
+          "label": "sofa",
+          "product_id": 1000035,
+          "reason": "fatigued"
+        },
+        {
+          "need": "furniture.kitchen.table",
+          "label": "table",
+          "product_id": 1000186,
+          "reason": "fatigued"
+        },
+        {
+          "need": "country_yard.lawn_mower",
+          "label": "lawn mower",
+          "product_id": 1001499,
+          "reason": "fatigued"
+        }
+      ],
+      "job": "Help them decide",
+      "message": "Comparisons, reviews, sizing and delivery facts for the need they are researching",
+      "avoid": "Pushing a new category before this one is solved",
+      "link": "Customer_Lens?customer=512126080"
+    },
+    "Ready to buy": {
+      "user_id": 512199240,
+      "mission": "new_home",
+      "mission_name": "Setting up a new home",
+      "stage": "Ready to buy",
+      "days_active": 35,
+      "journey": [
+        {
+          "need": "appliances.kitchen.refrigerators",
+          "label": "refrigerators",
+          "first_seen": "25 Oct",
+          "strongest_action": "added to cart",
+          "in_mission": true
+        },
+        {
+          "need": "furniture.universal.light",
+          "label": "light",
+          "first_seen": "28 Oct",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "appliances.environment.vacuum",
+          "label": "vacuum",
+          "first_seen": "31 Oct",
+          "strongest_action": "bought",
+          "in_mission": true
+        },
+        {
+          "need": "construction.tools.drill",
+          "label": "drill",
+          "first_seen": "07 Nov",
+          "strongest_action": "bought",
+          "in_mission": true
+        },
+        {
+          "need": "furniture.kitchen.chair",
+          "label": "chair",
+          "first_seen": "10 Nov",
+          "strongest_action": "added to cart",
+          "in_mission": true
+        },
+        {
+          "need": "appliances.kitchen.oven",
+          "label": "oven",
+          "first_seen": "15 Nov",
+          "strongest_action": "added to cart",
+          "in_mission": true
+        },
+        {
+          "need": "appliances.environment.air_conditioner",
+          "label": "air conditioner",
+          "first_seen": "21 Nov",
+          "strongest_action": "added to cart",
+          "in_mission": true
+        },
+        {
+          "need": "construction.tools.saw",
+          "label": "saw",
+          "first_seen": "26 Nov",
+          "strongest_action": "viewed",
+          "in_mission": true
+        }
+      ],
+      "mission_steps": [
+        "refrigerators",
+        "light",
+        "vacuum",
+        "drill",
+        "chair",
+        "oven",
+        "air conditioner",
+        "saw"
+      ],
+      "next_needs": [
+        {
+          "need": "furniture.living_room.cabinet",
+          "label": "cabinet",
+          "why": "19% of people who looked at chair went on to this"
+        },
+        {
+          "need": "appliances.kitchen.hood",
+          "label": "hood",
+          "why": "12% of people who looked at chair went on to this"
+        },
+        {
+          "need": "furniture.bathroom.bath",
+          "label": "bath",
+          "why": "15% of people who looked at oven went on to this"
+        }
+      ],
+      "stop": [
+        {
+          "need": "appliances.environment.vacuum",
+          "label": "vacuum",
+          "product_id": 1000388,
+          "reason": "bought"
+        },
+        {
+          "need": "construction.tools.drill",
+          "label": "drill",
+          "product_id": 1000431,
+          "reason": "bought"
+        },
+        {
+          "need": "appliances.kitchen.oven",
+          "label": "oven",
+          "product_id": 1000330,
+          "reason": "fatigued"
+        },
+        {
+          "need": "construction.tools.saw",
+          "label": "saw",
+          "product_id": 1000471,
+          "reason": "fatigued"
+        }
+      ],
+      "job": "Remove friction",
+      "message": "Cart reminder with delivery date, installation, instalments",
+      "avoid": "Default discounts \u2014 test first whether they're needed",
+      "link": "Customer_Lens?customer=512199240"
+    },
+    "Next need": {
+      "user_id": 512038320,
+      "mission": "new_home",
+      "mission_name": "Setting up a new home",
+      "stage": "Next need",
+      "days_active": 32,
+      "journey": [
+        {
+          "need": "furniture.living_room.sofa",
+          "label": "sofa",
+          "first_seen": "23 Oct",
+          "strongest_action": "bought",
+          "in_mission": true
+        },
+        {
+          "need": "appliances.kitchen.washer",
+          "label": "washer",
+          "first_seen": "29 Oct",
+          "strongest_action": "added to cart",
+          "in_mission": true
+        },
+        {
+          "need": "furniture.universal.light",
+          "label": "light",
+          "first_seen": "31 Oct",
+          "strongest_action": "added to cart",
+          "in_mission": true
+        },
+        {
+          "need": "appliances.environment.vacuum",
+          "label": "vacuum",
+          "first_seen": "04 Nov",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "auto.accessories.player",
+          "label": "player",
+          "first_seen": "06 Nov",
+          "strongest_action": "added to cart",
+          "in_mission": false
+        },
+        {
+          "need": "construction.tools.drill",
+          "label": "drill",
+          "first_seen": "11 Nov",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "furniture.kitchen.chair",
+          "label": "chair",
+          "first_seen": "14 Nov",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "furniture.living_room.cabinet",
+          "label": "cabinet",
+          "first_seen": "21 Nov",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "accessories.wallet",
+          "label": "wallet",
+          "first_seen": "22 Nov",
+          "strongest_action": "bought",
+          "in_mission": false
+        },
+        {
+          "need": "appliances.kitchen.hood",
+          "label": "hood",
+          "first_seen": "23 Nov",
+          "strongest_action": "bought",
+          "in_mission": true
+        }
+      ],
+      "mission_steps": [
+        "sofa",
+        "washer",
+        "light",
+        "vacuum",
+        "drill",
+        "chair",
+        "cabinet",
+        "hood"
+      ],
+      "next_needs": [
+        {
+          "need": "appliances.kitchen.oven",
+          "label": "oven",
+          "why": "17% of people who looked at hood went on to this"
+        },
+        {
+          "need": "furniture.bathroom.bath",
+          "label": "bath",
+          "why": "11% of people who looked at hood went on to this"
+        },
+        {
+          "need": "furniture.bedroom.blanket",
+          "label": "blanket",
+          "why": "8% of people who looked at hood went on to this"
+        }
+      ],
+      "stop": [
+        {
+          "need": "furniture.living_room.sofa",
+          "label": "sofa",
+          "product_id": 1000015,
+          "reason": "bought"
+        },
+        {
+          "need": "appliances.kitchen.hood",
+          "label": "hood",
+          "product_id": 1000352,
+          "reason": "bought"
+        },
+        {
+          "need": "accessories.wallet",
+          "label": "wallet",
+          "product_id": 1001475,
+          "reason": "bought"
+        },
+        {
+          "need": "furniture.kitchen.chair",
+          "label": "chair",
+          "product_id": 1000202,
+          "reason": "fatigued"
+        },
+        {
+          "need": "furniture.kitchen.chair",
+          "label": "chair",
+          "product_id": 1000220,
+          "reason": "fatigued"
+        },
+        {
+          "need": "appliances.environment.vacuum",
+          "label": "vacuum",
+          "product_id": 1000382,
+          "reason": "fatigued"
+        },
+        {
+          "need": "appliances.environment.vacuum",
+          "label": "vacuum",
+          "product_id": 1000388,
+          "reason": "fatigued"
+        },
+        {
+          "need": "auto.accessories.player",
+          "label": "player",
+          "product_id": 1001414,
+          "reason": "fatigued"
+        }
+      ],
+      "job": "Serve the next need",
+      "message": "Show the predicted next need; stop advertising what they bought",
+      "avoid": "Re-showing the purchased product",
+      "link": "Customer_Lens?customer=512038320"
+    },
+    "Mission complete": {
+      "user_id": 512215740,
+      "mission": "new_home",
+      "mission_name": "Setting up a new home",
+      "stage": "Mission complete",
+      "days_active": 30,
+      "journey": [
+        {
+          "need": "furniture.living_room.sofa",
+          "label": "sofa",
+          "first_seen": "30 Oct",
+          "strongest_action": "added to cart",
+          "in_mission": true
+        },
+        {
+          "need": "appliances.kitchen.refrigerators",
+          "label": "refrigerators",
+          "first_seen": "02 Nov",
+          "strongest_action": "bought",
+          "in_mission": true
+        },
+        {
+          "need": "appliances.kitchen.washer",
+          "label": "washer",
+          "first_seen": "06 Nov",
+          "strongest_action": "bought",
+          "in_mission": true
+        },
+        {
+          "need": "furniture.bedroom.bed",
+          "label": "bed",
+          "first_seen": "07 Nov",
+          "strongest_action": "added to cart",
+          "in_mission": true
+        },
+        {
+          "need": "apparel.costume",
+          "label": "costume",
+          "first_seen": "08 Nov",
+          "strongest_action": "added to cart",
+          "in_mission": false
+        },
+        {
+          "need": "furniture.universal.light",
+          "label": "light",
+          "first_seen": "13 Nov",
+          "strongest_action": "bought",
+          "in_mission": true
+        },
+        {
+          "need": "furniture.kitchen.table",
+          "label": "table",
+          "first_seen": "18 Nov",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "auto.accessories.player",
+          "label": "player",
+          "first_seen": "21 Nov",
+          "strongest_action": "added to cart",
+          "in_mission": false
+        },
+        {
+          "need": "construction.tools.drill",
+          "label": "drill",
+          "first_seen": "22 Nov",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "furniture.kitchen.chair",
+          "label": "chair",
+          "first_seen": "26 Nov",
+          "strongest_action": "added to cart",
+          "in_mission": true
+        }
+      ],
+      "mission_steps": [
+        "sofa",
+        "refrigerators",
+        "washer",
+        "bed",
+        "light",
+        "table",
+        "drill",
+        "chair"
+      ],
+      "next_needs": [
+        {
+          "need": "furniture.living_room.cabinet",
+          "label": "cabinet",
+          "why": "19% of people who looked at chair went on to this"
+        },
+        {
+          "need": "appliances.environment.vacuum",
+          "label": "vacuum",
+          "why": "19% of people who looked at light went on to this"
+        },
+        {
+          "need": "appliances.kitchen.hood",
+          "label": "hood",
+          "why": "12% of people who looked at chair went on to this"
+        }
+      ],
+      "stop": [
+        {
+          "need": "furniture.universal.light",
+          "label": "light",
+          "product_id": 1000280,
+          "reason": "bought"
+        },
+        {
+          "need": "appliances.kitchen.refrigerators",
+          "label": "refrigerators",
+          "product_id": 1000291,
+          "reason": "bought"
+        },
+        {
+          "need": "appliances.kitchen.washer",
+          "label": "washer",
+          "product_id": 1000314,
+          "reason": "bought"
+        }
+      ],
+      "job": "Make them loyal",
+      "message": "Care, accessories, services, membership, referral",
+      "avoid": "Acquisition-style ads for things they already own",
+      "link": "Customer_Lens?customer=512215740"
+    },
+    "Gone quiet": {
+      "user_id": 512091140,
+      "mission": "new_home",
+      "mission_name": "Setting up a new home",
+      "stage": "Gone quiet",
+      "days_active": 27,
+      "journey": [
+        {
+          "need": "furniture.living_room.sofa",
+          "label": "sofa",
+          "first_seen": "14 Oct",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "construction.tools.drill",
+          "label": "drill",
+          "first_seen": "19 Oct",
+          "strongest_action": "bought",
+          "in_mission": true
+        },
+        {
+          "need": "furniture.kitchen.table",
+          "label": "table",
+          "first_seen": "23 Oct",
+          "strongest_action": "bought",
+          "in_mission": true
+        },
+        {
+          "need": "auto.accessories.player",
+          "label": "player",
+          "first_seen": "24 Oct",
+          "strongest_action": "added to cart",
+          "in_mission": false
+        },
+        {
+          "need": "furniture.kitchen.chair",
+          "label": "chair",
+          "first_seen": "28 Oct",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "furniture.living_room.cabinet",
+          "label": "cabinet",
+          "first_seen": "01 Nov",
+          "strongest_action": "added to cart",
+          "in_mission": true
+        },
+        {
+          "need": "appliances.kitchen.oven",
+          "label": "oven",
+          "first_seen": "03 Nov",
+          "strongest_action": "viewed",
+          "in_mission": true
+        },
+        {
+          "need": "construction.tools.saw",
+          "label": "saw",
+          "first_seen": "09 Nov",
+          "strongest_action": "added to cart",
+          "in_mission": true
+        },
+        {
+          "need": "appliances.environment.air_conditioner",
+          "label": "air conditioner",
+          "first_seen": "10 Nov",
+          "strongest_action": "added to cart",
+          "in_mission": true
+        }
+      ],
+      "mission_steps": [
+        "sofa",
+        "drill",
+        "table",
+        "chair",
+        "cabinet",
+        "oven",
+        "saw",
+        "air conditioner"
+      ],
+      "next_needs": [
+        {
+          "need": "appliances.kitchen.hood",
+          "label": "hood",
+          "why": "3% of people who looked at air conditioner went on to this"
+        },
+        {
+          "need": "furniture.bedroom.blanket",
+          "label": "blanket",
+          "why": "5% of people who looked at saw went on to this"
+        },
+        {
+          "need": "furniture.bathroom.bath",
+          "label": "bath",
+          "why": "3% of people who looked at air conditioner went on to this"
+        }
+      ],
+      "stop": [
+        {
+          "need": "furniture.kitchen.table",
+          "label": "table",
+          "product_id": 1000190,
+          "reason": "bought"
+        },
+        {
+          "need": "construction.tools.drill",
+          "label": "drill",
+          "product_id": 1000432,
+          "reason": "bought"
+        }
+      ],
+      "job": "One smart win-back",
+      "message": "One message on the most likely next need, then stop",
+      "avoid": "Retargeting forever",
+      "link": "Customer_Lens?customer=512091140"
+    }
+  },
+  "next_need": {
+    "user_id": 512038320,
+    "mission": "new_home",
+    "mission_name": "Setting up a new home",
+    "stage": "Next need",
+    "days_active": 32,
+    "journey": [
+      {
+        "need": "furniture.living_room.sofa",
+        "label": "sofa",
+        "first_seen": "23 Oct",
+        "strongest_action": "bought",
+        "in_mission": true
+      },
+      {
+        "need": "appliances.kitchen.washer",
+        "label": "washer",
+        "first_seen": "29 Oct",
+        "strongest_action": "added to cart",
+        "in_mission": true
+      },
+      {
+        "need": "furniture.universal.light",
+        "label": "light",
+        "first_seen": "31 Oct",
+        "strongest_action": "added to cart",
+        "in_mission": true
+      },
+      {
+        "need": "appliances.environment.vacuum",
+        "label": "vacuum",
+        "first_seen": "04 Nov",
+        "strongest_action": "viewed",
+        "in_mission": true
+      },
+      {
+        "need": "auto.accessories.player",
+        "label": "player",
+        "first_seen": "06 Nov",
+        "strongest_action": "added to cart",
+        "in_mission": false
+      },
+      {
+        "need": "construction.tools.drill",
+        "label": "drill",
+        "first_seen": "11 Nov",
+        "strongest_action": "viewed",
+        "in_mission": true
+      },
+      {
+        "need": "furniture.kitchen.chair",
+        "label": "chair",
+        "first_seen": "14 Nov",
+        "strongest_action": "viewed",
+        "in_mission": true
+      },
+      {
+        "need": "furniture.living_room.cabinet",
+        "label": "cabinet",
+        "first_seen": "21 Nov",
+        "strongest_action": "viewed",
+        "in_mission": true
+      },
+      {
+        "need": "accessories.wallet",
+        "label": "wallet",
+        "first_seen": "22 Nov",
+        "strongest_action": "bought",
+        "in_mission": false
+      },
+      {
+        "need": "appliances.kitchen.hood",
+        "label": "hood",
+        "first_seen": "23 Nov",
+        "strongest_action": "bought",
+        "in_mission": true
+      }
+    ],
+    "mission_steps": [
+      "sofa",
+      "washer",
+      "light",
+      "vacuum",
+      "drill",
+      "chair",
+      "cabinet",
+      "hood"
+    ],
+    "next_needs": [
+      {
+        "need": "appliances.kitchen.oven",
+        "label": "oven",
+        "why": "17% of people who looked at hood went on to this"
+      },
+      {
+        "need": "furniture.bathroom.bath",
+        "label": "bath",
+        "why": "11% of people who looked at hood went on to this"
+      },
+      {
+        "need": "furniture.bedroom.blanket",
+        "label": "blanket",
+        "why": "8% of people who looked at hood went on to this"
+      }
+    ],
+    "stop": [
+      {
+        "need": "furniture.living_room.sofa",
+        "label": "sofa",
+        "product_id": 1000015,
+        "reason": "bought"
+      },
+      {
+        "need": "appliances.kitchen.hood",
+        "label": "hood",
+        "product_id": 1000352,
+        "reason": "bought"
+      },
+      {
+        "need": "accessories.wallet",
+        "label": "wallet",
+        "product_id": 1001475,
+        "reason": "bought"
+      },
+      {
+        "need": "furniture.kitchen.chair",
+        "label": "chair",
+        "product_id": 1000202,
+        "reason": "fatigued"
+      },
+      {
+        "need": "furniture.kitchen.chair",
+        "label": "chair",
+        "product_id": 1000220,
+        "reason": "fatigued"
+      },
+      {
+        "need": "appliances.environment.vacuum",
+        "label": "vacuum",
+        "product_id": 1000382,
+        "reason": "fatigued"
+      },
+      {
+        "need": "appliances.environment.vacuum",
+        "label": "vacuum",
+        "product_id": 1000388,
+        "reason": "fatigued"
+      },
+      {
+        "need": "auto.accessories.player",
+        "label": "player",
+        "product_id": 1001414,
+        "reason": "fatigued"
+      }
+    ],
+    "job": "Serve the next need",
+    "message": "Show the predicted next need; stop advertising what they bought",
+    "avoid": "Re-showing the purchased product",
+    "link": "Customer_Lens?customer=512038320"
+  },
+  "stop": {
+    "user_id": 512199240,
+    "mission": "new_home",
+    "mission_name": "Setting up a new home",
+    "stage": "Ready to buy",
+    "days_active": 35,
+    "journey": [
+      {
+        "need": "appliances.kitchen.refrigerators",
+        "label": "refrigerators",
+        "first_seen": "25 Oct",
+        "strongest_action": "added to cart",
+        "in_mission": true
+      },
+      {
+        "need": "furniture.universal.light",
+        "label": "light",
+        "first_seen": "28 Oct",
+        "strongest_action": "viewed",
+        "in_mission": true
+      },
+      {
+        "need": "appliances.environment.vacuum",
+        "label": "vacuum",
+        "first_seen": "31 Oct",
+        "strongest_action": "bought",
+        "in_mission": true
+      },
+      {
+        "need": "construction.tools.drill",
+        "label": "drill",
+        "first_seen": "07 Nov",
+        "strongest_action": "bought",
+        "in_mission": true
+      },
+      {
+        "need": "furniture.kitchen.chair",
+        "label": "chair",
+        "first_seen": "10 Nov",
+        "strongest_action": "added to cart",
+        "in_mission": true
+      },
+      {
+        "need": "appliances.kitchen.oven",
+        "label": "oven",
+        "first_seen": "15 Nov",
+        "strongest_action": "added to cart",
+        "in_mission": true
+      },
+      {
+        "need": "appliances.environment.air_conditioner",
+        "label": "air conditioner",
+        "first_seen": "21 Nov",
+        "strongest_action": "added to cart",
+        "in_mission": true
+      },
+      {
+        "need": "construction.tools.saw",
+        "label": "saw",
+        "first_seen": "26 Nov",
+        "strongest_action": "viewed",
+        "in_mission": true
+      }
+    ],
+    "mission_steps": [
+      "refrigerators",
+      "light",
+      "vacuum",
+      "drill",
+      "chair",
+      "oven",
+      "air conditioner",
+      "saw"
+    ],
+    "next_needs": [
+      {
+        "need": "furniture.living_room.cabinet",
+        "label": "cabinet",
+        "why": "19% of people who looked at chair went on to this"
+      },
+      {
+        "need": "appliances.kitchen.hood",
+        "label": "hood",
+        "why": "12% of people who looked at chair went on to this"
+      },
+      {
+        "need": "furniture.bathroom.bath",
+        "label": "bath",
+        "why": "15% of people who looked at oven went on to this"
+      }
+    ],
+    "stop": [
+      {
+        "need": "appliances.environment.vacuum",
+        "label": "vacuum",
+        "product_id": 1000388,
+        "reason": "bought"
+      },
+      {
+        "need": "construction.tools.drill",
+        "label": "drill",
+        "product_id": 1000431,
+        "reason": "bought"
+      },
+      {
+        "need": "appliances.kitchen.oven",
+        "label": "oven",
+        "product_id": 1000330,
+        "reason": "fatigued"
+      },
+      {
+        "need": "construction.tools.saw",
+        "label": "saw",
+        "product_id": 1000471,
+        "reason": "fatigued"
+      }
+    ],
+    "job": "Remove friction",
+    "message": "Cart reminder with delivery date, installation, instalments",
+    "avoid": "Default discounts \u2014 test first whether they're needed",
+    "link": "Customer_Lens?customer=512199240"
+  },
+  "weights": {
+    "view": 1.0,
+    "cart": 3.0,
+    "purchase": 5.0
+  }
+}

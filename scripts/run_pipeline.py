@@ -9,6 +9,7 @@ Writes to outputs/:
     transitions.csv           learned need -> next need transitions
     missions_now.csv          every (customer, mission) with score and stage
     customer_actions.csv      one decision per active customer
+    showcase.json             one example customer per use case (used by the app)
     recommendations.csv       top-k next needs per customer, with the reason
     suppression.csv           products to stop advertising, and why
     journey_depth_value.csv   mission depth vs what customers did next
@@ -34,6 +35,7 @@ from journey.config import OUTPUTS, PipelineConfig  # noqa: E402
 from journey.data_loader import load_events  # noqa: E402
 from journey.missions import score_missions  # noqa: E402
 from journey.next_need import NextNeedModel, evaluate  # noqa: E402
+from journey.showcase import build_showcase  # noqa: E402
 from journey.suppression import retargeting_waste  # noqa: E402
 from journey.value import journey_depth_vs_value, need_prices, next_need_opportunity  # noqa: E402
 
@@ -80,6 +82,7 @@ def main() -> None:
     recs.to_csv(OUTPUTS / "recommendations.csv", index=False)
     supp.to_csv(OUTPUTS / "suppression.csv", index=False)
     log(f"decisions for {len(actions):,} active customers", t0)
+    build_showcase(events, actions, missions_now, recs, supp, OUTPUTS / "showcase.json")
 
     # 3. Charts + results file
     charts.model_comparison(summary, source, cfg.top_k)

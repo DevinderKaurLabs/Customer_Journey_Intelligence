@@ -13,8 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from journey.config import MISSIONS, OUTPUTS, PALETTE  # noqa: E402
-from journey.missions import STAGE_ORDER, STAGE_RULES  # noqa: E402,F401  (re-exported for pages)
-from journey.actions import PLAYBOOK  # noqa: E402,F401  (re-exported for pages)
+from journey.missions import STAGE_ORDER, STAGE_RULES  # noqa: E402,F401  # re-exported for pages
+from journey.actions import PLAYBOOK  # noqa: E402,F401  # re-exported for pages
 
 MISSION_NAMES = {m.key: m.name for m in MISSIONS}
 MISSION_SIGNALS = {m.key: m.signal for m in MISSIONS}
@@ -29,7 +29,14 @@ h1, h2, h3 {{color: {NAVY};}}
 .kpi .l {{font-size: .85rem; color: #5B6B7C; margin-top: 4px}}
 .card {{background: white; border-left: 5px solid {TEAL}; border-radius: 10px; padding: 14px 18px; margin-bottom: 10px}}
 .pill {{display:inline-block; padding: 3px 10px; border-radius: 999px; background:{SKY}; color:{NAVY}; font-size:.8rem; margin-right:6px}}
-.demo {{background:#FFF7E6; border:1px solid #F0D9A8; border-radius:10px; padding:8px 12px; font-size:.85rem}}
+.src {{font-size:.8rem; color:#5B6B7C; margin:-6px 0 14px}}
+.track {{display:flex; flex-wrap:wrap; gap:6px; margin:4px 0 14px}}
+.step {{padding:6px 12px; border-radius:999px; font-size:.82rem; background:white; border:1px solid {SKY}; color:#5B6B7C}}
+.step.on {{background:{NAVY}; border-color:{NAVY}; color:white; font-weight:600}}
+.step.quiet {{border-style:dashed}}
+.ex {{background:white; border:1px solid {SKY}; border-radius:14px; padding:16px 18px; height:100%}}
+.ex h4 {{margin:0 0 6px; color:{NAVY}; font-size:1rem}}
+.ex p {{margin:0 0 8px; font-size:.88rem; color:#33475B}}
 </style>
 """
 
@@ -44,7 +51,9 @@ def kpi(col, value: str, label: str) -> None:
 
 
 def _ensure_outputs() -> None:
-    if (OUTPUTS / "customer_actions.csv").exists():
+    needed = [OUTPUTS / "customer_actions.csv", OUTPUTS / "showcase.json"]
+    has_events = any((ROOT / "data" / "processed").glob("events_*.parquet"))
+    if all(p.exists() for p in needed) and has_events:
         return
     with st.spinner("First run: building demo data and running the pipeline (about 30 seconds)…"):
         if not (ROOT / "data" / "raw" / "demo_events.csv.gz").exists():
@@ -79,12 +88,32 @@ def load_events() -> pd.DataFrame:
 def source_badge(meta: dict) -> None:
     if meta.get("demo"):
         st.markdown(
-            '<div class="demo">Running on <b>demo data</b> in the REES46 schema. '
-            "Numbers show how the system works — run the pipeline on the real REES46 files for real results.</div>",
+            '<div class="src">Demo mode: sample customers in the REES46 format and category tree. '
+            "Point the pipeline at the real REES46 files to see your own numbers.</div>",
             unsafe_allow_html=True,
         )
     else:
-        st.caption(f"Data: {meta['source']}")
+        st.markdown(f'<div class="src">Data: {meta["source"]}</div>', unsafe_allow_html=True)
+
+
+@st.cache_data(show_spinner=False)
+def load_showcase() -> dict:
+    _ensure_outputs()
+    p = OUTPUTS / "showcase.json"
+    return json.loads(p.read_text()) if p.exists() else {}
+
+
+def stage_track(current: str) -> str:
+    """The journey ladder as pills, current stage highlighted."""
+    steps = [s for s in STAGE_ORDER if s != "Gone quiet"]
+    html = "".join(f'<span class="step{" on" if s == current else ""}">{s}</span>' for s in steps)
+    html += f'<span class="step quiet{" on" if current == "Gone quiet" else ""}">Gone quiet</span>'
+    return f'<div class="track">{html}</div>'
+
+
+def label(need: str | float | None) -> str:
+    """'furniture.living_room.sofa' -> 'sofa'."""
+    return need.split(".")[-1].replace("_", " ") if isinstance(need, str) else "—"
 
 
 def pretty(need: str | float | None) -> str:

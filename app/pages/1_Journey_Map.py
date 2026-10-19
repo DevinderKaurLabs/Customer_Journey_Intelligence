@@ -3,7 +3,7 @@ import plotly.graph_objects as go
 import streamlit as st
 
 from common import MISSIONS, MISSION_NAMES, NAVY, TEAL, load_outputs, pretty, setup, source_badge
-from journey.next_need import need_in_mission
+from journey.next_need import home_mission
 
 setup("Journey Map")
 d = load_outputs()
@@ -14,13 +14,15 @@ st.markdown("Where customers go **next** after each need. Thicker flow = more cu
 source_badge(d["meta"])
 
 c1, c2, c3 = st.columns([2, 1, 1])
-mission_key = c1.selectbox("Mission", [m.key for m in MISSIONS], format_func=MISSION_NAMES.get)
+keys = [m.key for m in MISSIONS]
+qp = st.query_params.get("mission", "new_home")
+mission_key = c1.selectbox("Mission", keys, index=keys.index(qp) if qp in keys else 0, format_func=MISSION_NAMES.get)
 min_support = c2.slider("Min customers per path", 5, 300, 40, step=5)
 max_links = c3.slider("Max paths shown", 10, 60, 25, step=5)
 
 t = tr[
-    tr["from_need"].apply(lambda n: need_in_mission(n, mission_key))
-    & tr["to_need"].apply(lambda n: need_in_mission(n, mission_key))
+    (tr["from_need"].map(home_mission) == mission_key)
+    & (tr["to_need"].map(home_mission) == mission_key)
     & (tr["support"] >= min_support)
 ].sort_values("weight", ascending=False).head(max_links)
 

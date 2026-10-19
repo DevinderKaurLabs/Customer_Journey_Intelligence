@@ -2,7 +2,7 @@
 import plotly.graph_objects as go
 import streamlit as st
 
-from common import NAVY, SKY, TEAL, kpi, load_outputs, setup, source_badge
+from common import NAVY, SKY, kpi, load_outputs, setup, source_badge
 
 setup("Next-Need Model")
 d = load_outputs()
@@ -16,13 +16,13 @@ st.markdown(
 )
 source_badge(d["meta"])
 
-models = {"popularity": ("Show what's popular", SKY), "transitions": ("Predict the next need", NAVY),
-          "transitions+mission": ("…+ boost inside the mission", TEAL)}
+models = {"popularity": ("Show what's popular", SKY), "transitions": ("Predict the next need", NAVY)}
 segs = ["all customers", "in a mission", "no mission"]
 fig = go.Figure()
+names = {"all customers": "All customers", "in a mission": "In a life event", "no mission": "No life event"}
 for m, (label, color) in models.items():
     sub = ev[ev["model"] == m].set_index("segment").reindex(segs)
-    fig.add_bar(name=label, x=[s.title() for s in segs], y=sub["hit_rate"], marker_color=color,
+    fig.add_bar(name=label, x=[names[s] for s in segs], y=sub["hit_rate"], marker_color=color,
                 text=[f"{v:.0%}" for v in sub["hit_rate"]], textposition="outside",
                 hovertemplate="%{x}: %{y:.1%} hit rate<extra>" + label + "</extra>")
 fig.update_layout(barmode="group", height=420, yaxis=dict(visible=False, range=[0, 1.05]),
@@ -38,13 +38,12 @@ kpi(c2, f"{e.loc[('all customers', 'transitions'), 'purchase_hit_rate']:.0%}",
 kpi(c3, f"{int(e.loc[('all customers', 'transitions'), 'users']):,}", "customers in the backtest")
 
 st.subheader("What we learned")
-boost_gain = e.loc[("in a mission", "transitions+mission"), "hit_rate"] - e.loc[("in a mission", "transitions"), "hit_rate"]
-st.markdown(f"""
-- **Sequence beats popularity**, and the gap is biggest for customers inside a life mission — that's where behaviour is most predictable.
-- **Boosting candidates inside the detected mission changed the hit rate by {boost_gain:+.1%}.** The transitions already carry the mission
-  structure, so the mission's real value is in choosing *what job to do* (stage), not in re-ranking products. We keep the boost off by default in
-  evaluation claims and report it honestly.
-- **No-mission customers** still benefit, but less. For them, product-level retargeting with fatigue rules is the right default.
+st.markdown("""
+- **Following the sequence beats showing what's popular**, and the gap is biggest for customers inside a life event —
+  that's where behaviour is most predictable.
+- **The life event decides the message; the sequence decides the product.** The stage tells marketing what job to do
+  (inspire, help decide, remove friction, serve the next need, build loyalty). The transitions pick what to show.
+- **Customers with no life event** still benefit, but less. For them, product-level retargeting with fatigue rules is the right default.
 """)
 
 with st.expander("Full results table"):

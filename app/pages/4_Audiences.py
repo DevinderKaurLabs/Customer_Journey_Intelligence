@@ -43,6 +43,8 @@ st.download_button("Download suppression list (CSV)", supp[supp["user_id"].isin(
                    "suppression.csv", "text/csv")
 
 st.subheader("Why journeys matter for lifetime value")
+depth = depth.assign(repeat_rate=(depth["repeat_rate"] * 100).round(0).astype(int).astype(str) + "%",
+                     avg_next_spend=depth["avg_next_spend"].round(0).astype(int))
 st.dataframe(depth.rename(columns={"group": "Before the cutoff", "repeat_rate": "Bought again (next 30d)",
                                    "avg_next_spend": "Avg next-30d spend", "avg_next_orders": "Avg next-30d orders",
                                    "customers": "Customers"}).round(2), hide_index=True, width="stretch")
